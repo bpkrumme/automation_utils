@@ -1,0 +1,9 @@
+---
+- name: install a package using yum or dnf
+  hosts: managed
+  become: yes
+  tasks:
+    - name: install a package
+      yum:
+        name: "{{ package_to_install }}"
+        state: present
